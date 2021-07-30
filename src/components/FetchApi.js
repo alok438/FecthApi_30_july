@@ -5,15 +5,17 @@ import { login } from "../action/userSlice";
 import FetchShow from "./FetchShow";
 import { useSelector } from "react-redux";
 import { selectUser } from "../action/userSlice";
+import axios from "axios";
 import "./FetchApi.css";
 
 const FetchApi = () => {
   const [entry, setEntry] = useState([]);
   const dispatch = useDispatch();
   const fetchHandler = (event) => {
-    fetch("https://api.publicapis.org/entries")
+    axios
+      .get("https://api.publicapis.org/entries")
       .then((response) => {
-        return response.json();
+        return response.data;
       })
       .then((data) => {
         const transformEntries = data.entries.map((apiData) => {
