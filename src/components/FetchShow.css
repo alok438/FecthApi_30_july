@@ -1,0 +1,18 @@
+.fetchdata {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+
+.h2 {
+  font-size: 2rem;
+  color: #f07f15;
+}
+
+.h3 {
+  color: #eccf77;
+  margin: 0;
+  font-size: 1rem;
+}
